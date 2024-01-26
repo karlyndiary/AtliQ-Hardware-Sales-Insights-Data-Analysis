@@ -1,6 +1,6 @@
 # Sales Insights Data Analysis
 
-##<span> Table of Contents </span>
+## <span> Table of Contents </span>
 * [1. Problem Statement](#1-problem-statement)
 * [2. Process](#2-process)
 * [3. Analyze and Share](#3-analyze-and-share)
