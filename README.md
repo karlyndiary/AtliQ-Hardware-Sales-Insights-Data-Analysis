@@ -67,7 +67,7 @@ SELECT month_name AS month, sum(sales_amount)AS sales_amount
 FROM sales.date d
 INNER JOIN sales.transactions t 
 ON t.order_date = d.date
-WHERE market_code = 'Mark002'
+WHERE year = 2020 AND market_code = 'Mark002'
 GROUP BY month_name
 ORDER BY sales_amount DESC;
 ```
