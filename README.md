@@ -171,6 +171,26 @@ SELECT sum(sales_qty) AS sales_quantity, sum(sales_amount) AS sales_amount
 FROM sales.transactions;
 ```
 
+15. How do sales vary across different market zones over time?
+```
+SELECT m.markets_name, m.zone, year,
+    month_name AS month,
+    SUM(t.sales_amount) AS sales_amount
+FROM sales.date d 
+JOIN sales.transactions t 
+ON t.order_date = d.date
+JOIN sales.markets m ON m.markets_code = t.market_code
+GROUP BY 
+    m.markets_name, 
+    m.zone,
+    year,
+    month
+ORDER BY 
+    year, 
+    month,
+    m.zone;
+
+```
 ### ER Diagram
 
 ### Power BI Dashboard
