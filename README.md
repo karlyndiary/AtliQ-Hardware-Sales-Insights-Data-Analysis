@@ -1,6 +1,12 @@
 # Sales Insights Data Analysis
 
-## Problem Statement :
+##<span> Table of Contents </span>
+* [1. Problem Statement](#1-problem-statement)
+* [2. Process](#2-process)
+* [3. Analyze and Share](#3-analyze-and-share)
+* [4. Tableau Dashboard](#4-tableau-dashboard)
+  
+### Problem Statement :
 In this project performed India-based AtliQ hardware company sales insights - A Data Analysis project.
 
 AtliQ Hardware is a company which supplies computer hardware and peripherals to many clients such as surge stores, Nomad stores etc. across India. AtliQ Hardware head office is situated in Delhi, India and they have many regional office through out the India.
