@@ -2,9 +2,9 @@
 
 ## <span> Table of Contents </span>
 * [1. Problem Statement](#1-problem-statement)
-* [2. Process](#2-process)
+* [2. AIMS Grid](#2-aims-grid)
 * [3. Analyze and Share](#3-analyze-and-share)
-* [4. Tableau Dashboard](#4-tableau-dashboard)
+* [4. Power BI Dashboard](#4-power-bi-dashboard)
   
 ### Problem Statement :
 In this project performed India-based AtliQ hardware company sales insights - A Data Analysis project.
@@ -24,5 +24,8 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 * Data & Analytics Team
 * IT
 3. End result - An automated dashboard providing quick and latest sights in order to support Data driven decision making.
-4. Success Criteria - Dahboard uncovering sales order insights with latest data available Sales team able to take better decisions and prove 10% cost saving of total spend. Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
+4. Success Criteria -
+* Dahboard uncovering sales order insights with latest data available.
+* Sales team able to take better decisions and prove 10% cost saving of total spend.
+* Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
   
