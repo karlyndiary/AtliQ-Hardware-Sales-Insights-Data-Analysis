@@ -200,3 +200,18 @@ ORDER BY
 ```
 
 ### Power BI Dashboard
+
+#### Data Cleaning
+
+1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown.
+```
+= Table.SelectRows(sales_markets, each ([zone] <> ""))
+```
+2. The transaction table has a ton of 0 and negative values in the sales_amount column.
+```
+= Table.SelectRows(sales_transactions, each ([sales_amount] <> -1 and [sales_amount] <> 0))
+```
+3. Converting USD currency to INR
+```
+= Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" then [sales_amount]*83 else [sales_amount])
+```
