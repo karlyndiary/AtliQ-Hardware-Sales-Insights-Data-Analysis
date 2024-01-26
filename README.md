@@ -1,10 +1,11 @@
 # AtliQ Hardware - Sales Insights Data Analysis
 
 ## <span> Table of Contents </span>
-* [1. Problem Statement](#1-problem-statement)
-* [2. AIMS Grid](#2-aims-grid)
-* [3. ER Diagram](#3-er-diagram)
-* [4. Power BI Dashboard](#4-power-bi-dashboard)
+* [Problem Statement](#problem-statement)
+* [AIMS Grid](#aims-grid)
+* [Analysis using SQL](#analysis-using-sql)
+* [ER Diagram](#er-diagram)
+* [Power BI Dashboard](#power-bi-dashboard)
   
 ### Problem Statement :
 In this project performed India-based AtliQ hardware company sales insights - A Data Analysis project.
@@ -30,6 +31,7 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 * Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
 
 ### Analysis using SQL
+
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
 1. Total no of sales made in 2020
 ```
