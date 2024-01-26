@@ -3,7 +3,7 @@
 ## <span> Table of Contents </span>
 * [1. Problem Statement](#1-problem-statement)
 * [2. AIMS Grid](#2-aims-grid)
-* [3. Analyze and Share](#3-analyze-and-share)
+* [3. ER Diagram](#3-er-diagram)
 * [4. Power BI Dashboard](#4-power-bi-dashboard)
   
 ### Problem Statement :
@@ -31,5 +31,7 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 
 ### Analysis using SQL
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
+
+### ER Diagram
 
 ### Power BI Dashboard
