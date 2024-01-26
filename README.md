@@ -33,7 +33,7 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 * Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
 
 ### ER Diagram
-![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/270df64f-9d01-46d4-8faa-c1b0694a3934)
+![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/842e325a-083e-46e0-a803-c60c67a2ba57)
 
 ### Analysis using SQL
 
