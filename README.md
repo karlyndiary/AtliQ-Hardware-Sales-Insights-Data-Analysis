@@ -200,7 +200,7 @@ ORDER BY
 
 ### Power BI Dashboard
 
-#### Data Cleaning
+#### Data Cleaning - Power  Query
 
 1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown.
 ```
@@ -210,7 +210,7 @@ ORDER BY
 ```
 = Table.SelectRows(sales_transactions, each ([sales_amount] <> -1 and [sales_amount] <> 0))
 ```
-3. Converting USD currency to INR
+3. Converting USD currency to INR [General currency conversion for now]
 ```
 = Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*83 else [sales_amount])
 ```
