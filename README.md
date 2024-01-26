@@ -29,3 +29,4 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 * Sales team able to take better decisions and prove 10% cost saving of total spend.
 * Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
   
+### Power BI Dashboard
