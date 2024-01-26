@@ -1,4 +1,4 @@
-# Sales Insights Data Analysis
+# AtliQ Hardware - Sales Insights Data Analysis
 
 ## <span> Table of Contents </span>
 * [1. Problem Statement](#1-problem-statement)
