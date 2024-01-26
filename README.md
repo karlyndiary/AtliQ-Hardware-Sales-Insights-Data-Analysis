@@ -38,6 +38,7 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 ### Analysis using SQL
 
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
+
 1. Total no of sales made in 2020
 ```
 SELECT count(*) AS sales_total
@@ -46,7 +47,7 @@ INNER JOIN sales.transactions t
 ON t.order_date = d.date
 WHERE year = 2020;
 ```
-21550
+The total no of sales made in 2020 is 21,550.
 
 2. Total Revenue made in 2020
 ```
@@ -56,7 +57,7 @@ INNER JOIN sales.transactions t
 ON t.order_date = d.date
 WHERE year = 2020;
 ```
-142235559
+Total Revenue made in 2020 is Rs 14,22,35,559/-
 
 3. Total Revenue per month in 2020
 ```
@@ -67,6 +68,7 @@ ON t.order_date = d.date
 WHERE year = 2020
 GROUP BY month_name;
 ```
+The highest revenue in 2020 is February with Rs 2,69,25,734/-
 
 4. Total Revenue per month in 2020 by the Mumbai Market
 ```
@@ -78,6 +80,7 @@ WHERE year = 2020 AND market_code = 'Mark002'
 GROUP BY month_name
 ORDER BY sales_amount DESC;
 ```
+The highest revenue in 2020 is February with Rs 49,68,501/- by the Mumbai Market
 
 5. What are the peak sales months?
 ```
@@ -131,17 +134,7 @@ GROUP BY product_type
 ORDER BY sales_amount DESC; 
 ```
 
-11. Which products contribute the most to sales revenue?
-```
-SELECT product_type, sum(sales_amount) AS sales_amount
-FROM sales.transactions t
-JOIN sales.products p
-ON p.product_code = t.product_code
-GROUP BY product_type
-ORDER BY sales_amount DESC; 
-```
-
-12. Can we identify the top-selling products in each market?
+11. Can we identify the top-selling products in each market?
 ```
 SELECT markets_name, product_type, sum(sales_amount) AS sales_amount
 FROM sales.products p 
@@ -153,32 +146,20 @@ GROUP BY markets_name
 ORDER BY sales_amount DESC;
 ```
 
-13. Can we identify the top-selling products in each market?
-```
-SELECT markets_name, product_type, sum(sales_amount) AS sales_amount
-FROM sales.products p 
-JOIN sales.transactions t
-ON p.product_code = t.product_code
-JOIN sales.markets m 
-ON m.markets_code = t.market_code
-GROUP BY markets_name
-ORDER BY sales_amount DESC;
-```
-
-14. What is the distribution of customers across different customer types?
+12. What is the distribution of customers across different customer types?
 ```
 SELECT customer_type, COUNT(*) AS customer_count
 FROM sales.customers
 GROUP BY customer_type;
 ```
 
-15. What is the overall sales quantity and sales amount?
+13. What is the overall sales quantity and sales amount?
 ```
 SELECT sum(sales_qty) AS sales_quantity, sum(sales_amount) AS sales_amount
 FROM sales.transactions;
 ```
 
-15. How do sales vary across different market zones over time?
+14. How do sales vary across different market zones over time?
 ```
 SELECT m.markets_name, m.zone, year,
     month_name AS month,
