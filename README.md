@@ -31,6 +31,46 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 
 ### Analysis using SQL
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
+1. Total no of sales made in 2020
+```
+SELECT count(*) AS sales_total
+FROM sales.date d
+INNER JOIN sales.transactions t 
+ON t.order_date = d.date
+WHERE year = 2020;
+```
+21550
+
+2. Total Revenue made in 2020
+```
+SELECT sum(sales_amount) AS total_revenue_2020
+FROM sales.date d
+INNER JOIN sales.transactions t 
+ON t.order_date = d.date
+WHERE year = 2020;
+```
+142235559
+
+3. Total Revenue per month in 2020
+```
+SELECT month_name AS month, sum(sales_amount) AS sales_amount
+FROM sales.date d
+INNER JOIN sales.transactions t 
+ON t.order_date = d.date
+WHERE year = 2020
+GROUP BY month_name;
+```
+
+4. Total Revenue per month in 2020 by the Mumbai Market
+```
+SELECT month_name AS month, sum(sales_amount)AS sales_amount
+FROM sales.date d
+INNER JOIN sales.transactions t 
+ON t.order_date = d.date
+WHERE market_code = 'Mark002'
+GROUP BY month_name
+ORDER BY sales_amount DESC;
+```
 
 ### ER Diagram
 
