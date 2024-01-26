@@ -196,7 +196,6 @@ ORDER BY
     year, 
     month,
     m.zone;
-
 ```
 
 ### Power BI Dashboard
@@ -213,5 +212,5 @@ ORDER BY
 ```
 3. Converting USD currency to INR
 ```
-= Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" then [sales_amount]*83 else [sales_amount])
+= Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*83 else [sales_amount])
 ```
