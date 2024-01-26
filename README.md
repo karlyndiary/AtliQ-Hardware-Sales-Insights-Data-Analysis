@@ -3,8 +3,8 @@
 ## <span> Table of Contents </span>
 * [Problem Statement](#problem-statement)
 * [AIMS Grid](#aims-grid)
-* [Analysis using SQL](#analysis-using-sql)
 * [ER Diagram](#er-diagram)
+* [Analysis using SQL](#analysis-using-sql)
 * [Power BI Dashboard](#power-bi-dashboard)
   
 ### Problem Statement
@@ -31,6 +31,9 @@ The problem was that all thses thing happening is verbal and these was mo proof 
 * Dahboard uncovering sales order insights with latest data available.
 * Sales team able to take better decisions and prove 10% cost saving of total spend.
 * Sales analysis stop data gathering manually in order to save 20% business time andreinvest it value added activity.
+
+### ER Diagram
+![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/270df64f-9d01-46d4-8faa-c1b0694a3934)
 
 ### Analysis using SQL
 
@@ -195,6 +198,5 @@ ORDER BY
     m.zone;
 
 ```
-### ER Diagram
 
 ### Power BI Dashboard
