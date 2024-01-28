@@ -183,7 +183,7 @@ ORDER BY
 
 #### Data Cleaning - Power  Query
 
-1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown.
+1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown. or Market table -> Home tab -> Transform data -> Transform data 
 ```
 = Table.SelectRows(sales_markets, each ([zone] <> ""))
 ```
@@ -192,6 +192,7 @@ ORDER BY
 = Table.SelectRows(sales_transactions, each ([sales_amount] <> -1 and [sales_amount] <> 0))
 ```
 3. Converting USD currency to INR [General currency conversion for now]
+Add column -> Conditional column
 ```
 = Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*83 else [sales_amount])
 ```
