@@ -18,7 +18,7 @@ The sales director seeks a comprehensive data visualization tool to address thes
 
 In this project, we aim to assist AtliQ Hardware in developing its own sales dashboard using Power BI. This dashboard will offer real-time access to sales data, empowering the company to make strategic decisions based on concrete insights and thereby enhance its sales performance.
 
-Dataset: 
+Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
 
 ### AIMS Grid
 
@@ -92,14 +92,15 @@ The highest revenue in 2020 is February with Rs 49,68,501/- by the Mumbai Market
 
 5. What are the peak sales months?
 ```
-SELECT month_name as month, year, sum(sales_amount) as total_sales 
+SELECT month_name as month, year, sum(sales_qty) as total_sales 
 FROM atliq.date d
 INNER JOIN atliq.transactions t 
 ON t.order_date = d.date
-GROUP BY year, month_name
+WHERE year = 2020
+GROUP BY month_name
 ORDER BY total_sales DESC;
 ```
-
+March produced a sale of 73384 in 2020.
 
 6. How many unique customers are there in the dataset?
 ```
@@ -110,21 +111,22 @@ There are 38 unique customers.
 
 7. Which customers generate the highest sales volume?
 ```
-SELECT DISTINCT customer_name, sum(sales_amount) AS sales_amount
+SELECT customer_name, sum(sales_qty) AS sales_amount
 FROM atliq.customers c
 JOIN atliq.transactions t
 ON t.customer_code = c.customer_code
+WHERE year(order_date) = 2020
 GROUP BY customer_name
 ORDER BY sales_amount DESC;
 ```
-
+Electricalsara Stores with 100374, Premium Stores with 28211, and Surge Stores with 22317 are the top 3 customers who generated the highest sales volumn in 2020.
 
 8. What are the different customer types present?
 ```
 SELECT DISTINCT customer_type
 FROM atliq.customers; 
 ```
-
+Brick & Mortar and E-Commerce are the two customer types.
 
 9. What are the sales performances across different markets?
 ```
@@ -159,7 +161,7 @@ ON m.markets_code = t.market_code
 GROUP BY markets_name
 ORDER BY sales_amount DESC;
 ```
-
+In Delhi NCR of Own Brand product type 
 
 12. What is the distribution of customers across different customer types?
 ```
