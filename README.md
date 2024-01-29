@@ -6,7 +6,7 @@
 * [Tools Used](#tools-used)
 * [ER Diagram](#er-diagram)
 * [Analysis using SQL](#analysis-using-sql)
-* [Power BI Dashboard](#power-bi-dashboard)
+* [Power BI Analysis & Dashboard](#power-bi-analysis-and-dashboard)
   
 ### Problem Statement
 
@@ -24,11 +24,11 @@ Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
 
 1. Purpose - To unlock sales insights that were not visible before for the sales for decision support and automate them to reduce manual time spent in data gathering.
 2. Stake Holders
-  * Sales Director
- 	* Marketing Team
-  * Customer Service Team
-  * Data & Analytics Team
-  * IT
+    * Sales Director
+  	* Marketing Team
+    * Customer Service Team
+    * Data & Analytics Team
+    * IT
 3. End result - An automated dashboard providing quick and latest sights to support Data-driven decision making.
 4. Success Criteria -
 * Dahboard uncovering sales order insights with the latest data available.
@@ -178,7 +178,7 @@ FROM atliq.transactions;
 ```
 The overall sales quantity is and sales amount is
 
-### Power BI Dashboard
+### Power BI Analysis and Dashboard
 
 #### ETL (Extract, Transform, Load) & Data Cleaning - Power Query
 
@@ -208,3 +208,8 @@ sales quntity = SUM('sales transactions'[sales_qty])
 * Profit Target1 = GENERATESERIES(-0.05, 0.15, 0.01)
 * Profit Target Value = SELECTEDVALUE('Profit Target1'[Profit Target])
 * Target Diff = [Profit Margin %]-'Profit Target1'[Profit Target Value]
+
+#### Dashboard 
+![Atliq Hardware Sales Insight Dashboard_page-0001](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/acddd264-b5e9-4915-8940-ab3c74c7c409)
+![Atliq Hardware Sales Insight Dashboard_page-0002](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/f2d8bb71-17b7-4e06-a30b-b3e678f74340)
+![Atliq Hardware Sales Insight Dashboard_page-0003](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/bc69e271-e7e1-4649-a7ce-dfd8a0e089a7)
