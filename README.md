@@ -14,9 +14,11 @@ AtliQ Hardware, an India-based company specializing in computer hardware and per
 
 The sales director encounters difficulties as the market expands rapidly, leading to a decline in overall sales. The absence of concrete data and reliance on verbal reports from regional managers exacerbates the problem. Despite verbal updates, the director lacks tangible evidence to assess the business's performance accurately.
 
-To address these issues and enable data-driven decision-making, the sales director seeks a comprehensive data visualization tool. Such a tool would provide clear insights into regional and overall sales trends, facilitating informed decisions to drive business growth.
+The sales director seeks a comprehensive data visualization tool to address these issues and enable data-driven decision-making. Such a tool would provide clear insights into regional and overall sales trends, facilitating informed decisions to drive business growth.
 
 In this project, we aim to assist AtliQ Hardware in developing its own sales dashboard using Power BI. This dashboard will offer real-time access to sales data, empowering the company to make strategic decisions based on concrete insights and thereby enhance its sales performance.
+
+Dataset: 
 
 ### AIMS Grid
 
@@ -176,7 +178,7 @@ The overall sales quantity is and sales amount is
 
 ### Power BI Dashboard
 
-#### Data Cleaning - Power  Query
+#### ETL (Extract, Transform, Load) & Data Cleaning - Power Query
 
 1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown. or Market table -> Home tab -> Transform data -> Transform data 
 ```
@@ -191,3 +193,16 @@ Add column -> Conditional column
 ```
 = Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*83 else [sales_amount])
 ```
+
+#### Key Measures (DAX):
+
+* Profit Margin % = DIVIDE([Total Profit Margin],[Revenue],0)
+* Profit Margin Contribution % = DIVIDE([Total Profit Margin],CALCULATE([Total Profit Margin],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
+* Revenue = SUM('sales transactions'[sales_amount])
+* Revenue Contribution % = DIVIDE([Revenue],CALCULATE([Revenue],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
+* Revenue LY = CALCULATE([Revenue],SAMEPERIODLASTYEAR('sales date'[date]))
+sales quntity = SUM('sales transactions'[sales_qty])
+* Total Profit Margin = SUM('Sales transactions'[Profit_Margin])
+* Profit Target1 = GENERATESERIES(-0.05, 0.15, 0.01)
+* Profit Target Value = SELECTEDVALUE('Profit Target1'[Profit Target])
+* Target Diff = [Profit Margin %]-'Profit Target1'[Profit Target Value]
