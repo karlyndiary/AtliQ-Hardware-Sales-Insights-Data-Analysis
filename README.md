@@ -47,15 +47,16 @@ Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
 
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
 
-1. Total no of sales made in 2020
+1. Total no of products sold in 2020
 ```
-SELECT count(*) AS sales_total
-FROM atliq.date d
-INNER JOIN atliq.transactions t 
-ON t.order_date = d.date
-WHERE year = 2020;
+SELECT count(customer_code) as customer_total, sales_quantity
+FROM(
+     SELECT customer_code, sum(sales_qty) as sales_quantity
+     FROM atliq.transactions 
+     WHERE year(order_date) = 2020
+     GROUP BY customer_code) AS total_products_sold;
 ```
-The total no of sales made in 2020 is 21,550.
+The total no of products sold in 2020 is 14933.
 
 2. Total Revenue made in 2020
 ```
