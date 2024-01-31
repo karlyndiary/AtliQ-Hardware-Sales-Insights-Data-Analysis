@@ -58,7 +58,7 @@ FROM(
 ```
 The total no of products sold in 2020 is 14933.
 
-2. Total Revenue made in 2020
+2. Total Revenue made in 2020 [2017 has 2 international clients]
 ```
 SELECT sum(sales_amount) AS total_revenue_2020
 FROM atliq.date d
