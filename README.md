@@ -211,6 +211,6 @@ sales quntity = SUM('sales transactions'[sales_qty])
 * Target Diff = [Profit Margin %]-'Profit Target1'[Profit Target Value]
 
 #### Dashboard 
-![Atliq Hardware Sales Insight Dashboard_page-0001](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/acddd264-b5e9-4915-8940-ab3c74c7c409)
-![Atliq Hardware Sales Insight Dashboard_page-0002](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/f2d8bb71-17b7-4e06-a30b-b3e678f74340)
-![Atliq Hardware Sales Insight Dashboard_page-0003](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/bc69e271-e7e1-4649-a7ce-dfd8a0e089a7)
+![Atliq Hardware Sales Insight Dashboard - Copy_page-0001](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/312a0346-4411-409e-8205-32e604843b7e)
+![Atliq Hardware Sales Insight Dashboard - Copy_page-0002](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/e05b11d3-3b4e-470c-9164-68ff70fae71c)
+![Atliq Hardware Sales Insight Dashboard - Copy_page-0003](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/898d0ba8-1565-40ec-9e29-493b9c8afe46)
