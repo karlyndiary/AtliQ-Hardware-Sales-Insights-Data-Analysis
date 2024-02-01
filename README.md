@@ -181,8 +181,7 @@ The overall sales quantity is and sales amount is
 
 ### Power BI Analysis and Dashboard
 
-#### ETL (Extract, Transform, Load) & Data Cleaning - Power Query
-
+#### ETL (Extract, Transform, Load) & Data Cleaning - Power Query 
 1. The market table has two international markets with no zones allocated. Filtering it out using the dropdown. or Market table -> Home tab -> Transform data -> Transform data 
 ```
 = Table.SelectRows(sales_markets, each ([zone] <> ""))
@@ -197,18 +196,55 @@ Add column -> Conditional column
 = Table.AddColumn(#"Filtered Rows", "norm_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*83 else [sales_amount])
 ```
 
-#### Key Measures (DAX):
-
-* Profit Margin % = DIVIDE([Total Profit Margin],[Revenue],0)
-* Profit Margin Contribution % = DIVIDE([Total Profit Margin],CALCULATE([Total Profit Margin],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
-* Revenue = SUM('sales transactions'[sales_amount])
-* Revenue Contribution % = DIVIDE([Revenue],CALCULATE([Revenue],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
-* Revenue LY = CALCULATE([Revenue],SAMEPERIODLASTYEAR('sales date'[date]))
-sales quntity = SUM('sales transactions'[sales_qty])
-* Total Profit Margin = SUM('Sales transactions'[Profit_Margin])
-* Profit Target1 = GENERATESERIES(-0.05, 0.15, 0.01)
-* Profit Target Value = SELECTEDVALUE('Profit Target1'[Profit Target])
-* Target Diff = [Profit Margin %]-'Profit Target1'[Profit Target Value]
+#### Key Measures:
+1. Average Sales per Transaction
+```
+Average Sales per Transaction = DIVIDE(SUM('atliq transactions'[norm_sales_amount]), COUNTROWS('atliq transactions'))
+```
+2. Profit Margin %
+```
+Profit Margin % = DIVIDE([Total Profit Margin],[Revenue],0)
+```
+3. Profit Margin Contribution %
+```
+Profit Margin Contribution % = DIVIDE([Total Profit Margin],CALCULATE([Total Profit Margin],ALL('atliq products'),ALL('atliq customers'),ALL('atliq markets')))
+```
+4. Total Revenue
+```
+Revenue = SUM('sales transactions'[sales_amount])
+```
+5. Revenue Contribution %
+```
+Revenue Contribution % = DIVIDE([Revenue],CALCULATE([Revenue],ALL('atliq products'),ALL('atliq customers'),ALL('atliq markets')))
+```
+6. Total Sales Quantity
+```
+Sales Quantity = SUM('atliq transactions'[sales_qty])
+```
+7. Total Profit Margin
+```
+Total Profit Margin = SUM('atliq transactions'[profit_margin])
+```
+8. Average Sales Amount per Customer
+```
+Avg Sales Amt per Customer = DIVIDE(SUM('atliq transactions'[norm_sales_amount]), DISTINCTCOUNT('atliq customers'[customer_code]))
+```
+9. Total Customer Types
+```
+Customer Types = DISTINCTCOUNT('atliq customers'[customer_type])
+```
+10. Total Markets
+```
+Markets = DISTINCTCOUNT('atliq transactions'[market_code])
+```
+11. Total Product Types
+```
+Product Types = DISTINCTCOUNT('atliq products'[product_type])
+```
+12. Total Customers
+```
+Unique Customers = DISTINCTCOUNT('atliq transactions'[customer_code])
+```
 
 #### Dashboard 
 ![Atliq Hardware Sales Insight Dashboard - Copy_page-0001](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/312a0346-4411-409e-8205-32e604843b7e)
