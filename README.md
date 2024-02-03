@@ -30,10 +30,10 @@ Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
     * Data & Analytics Team
     * IT
 3. End result - An automated dashboard providing quick and latest sights to support Data-driven decision making.
-4. Success Criteria -
-* Dahboard uncovering sales order insights with the latest data available.
-* Sales team able to make better decisions and prove 10% cost saving of total spend.
-* Sales analysis stops data gathering manually to save 20% of business time and reinvest it value added activity.
+4. Success Criteria
+    * Dashboard uncovering sales order insights with the latest data available.
+    * Sales team able to make better decisions and prove 10% cost saving of total spend.
+    * Sales analysis stops data gathering manually to save 20% of business time and reinvest it value added activity.
 
 ### Tools Used
 * MySQL
