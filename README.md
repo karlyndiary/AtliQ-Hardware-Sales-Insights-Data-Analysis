@@ -41,7 +41,7 @@ Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
 * Power Query Editor
 
 ### ER Diagram
-![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/d2a6f2b3-8d72-47d7-9012-110b9e63e2e1)
+![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/244e7c3c-16ea-4005-975f-4c8ee0ecefac)
 
 ### Analysis using SQL
 
