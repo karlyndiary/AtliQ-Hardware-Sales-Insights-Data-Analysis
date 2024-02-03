@@ -143,14 +143,17 @@ Among the 15 markets, Delhi exhibited the most outstanding sales performance, am
 
 10. Which products contribute the most to sales revenue?
 ```
-SELECT product_type, sum(sales_amount) AS sales_amount
+SELECT product_type,
+    SUM(CASE
+        WHEN t.currency = 'USD' THEN sales_amount * 83 
+        ELSE sales_amount
+    END) AS sales_amount_inr
 FROM atliq.transactions t
-JOIN atliq.products p
-ON p.product_code = t.product_code
+JOIN atliq.products p ON p.product_code = t.product_code
 GROUP BY product_type
-ORDER BY sales_amount DESC; 
+ORDER BY sales_amount_inr DESC; 
 ```
-
+Own Brand products contributed Rs 36,98,74,148/-, and Distribution products contributed Rs 14,60,39,576/- to the total sales revenue.
 
 11. Can we identify the top-selling products in each market?
 ```
