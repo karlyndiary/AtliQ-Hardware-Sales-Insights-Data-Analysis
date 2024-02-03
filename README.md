@@ -256,6 +256,6 @@ Unique Customers = DISTINCTCOUNT('atliq transactions'[customer_code])
 ```
 
 #### Dashboard 
-![Atliq Hardware Sales Insight Dashboard - Copy_page-0001](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/312a0346-4411-409e-8205-32e604843b7e)
-![Atliq Hardware Sales Insight Dashboard - Copy_page-0002](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/e05b11d3-3b4e-470c-9164-68ff70fae71c)
-![Atliq Hardware Sales Insight Dashboard - Copy_page-0003](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/898d0ba8-1565-40ec-9e29-493b9c8afe46)
+![Atliq Hardware Sales Insight Dashboard-cropped](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/94063e25-cccc-4784-9192-4f4fe52d80d9)
+![Atliq Hardware Sales Insight Dashboard-cropped-2](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/07c71d2a-c8ac-456f-ae8e-8d1c7d0a2ebe)
+![Atliq Hardware Sales Insight Dashboard-cropped-3](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/3dfbd5eb-b1c8-4d48-b1f5-6cfaf9f239b3)
