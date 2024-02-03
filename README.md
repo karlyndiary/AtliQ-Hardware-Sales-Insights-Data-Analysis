@@ -157,16 +157,18 @@ Own Brand products contributed Rs 36,98,74,148/-, and Distribution products cont
 
 11. Can we identify the top-selling products in each market?
 ```
-SELECT markets_name, product_type, sum(sales_amount) AS sales_amount
+SELECT markets_name, product_type, 
+    SUM(CASE
+        WHEN t.currency = 'USD' THEN sales_amount * 83 
+        ELSE sales_amount
+    END) AS sales_amount_inr
 FROM atliq.products p 
-JOIN atliq.transactions t
-ON p.product_code = t.product_code
-JOIN atliq.markets m 
-ON m.markets_code = t.market_code
-GROUP BY markets_name
-ORDER BY sales_amount DESC;
+JOIN atliq.transactions t ON p.product_code = t.product_code
+JOIN atliq.markets m ON m.markets_code = t.market_code
+GROUP BY markets_name, product_type
+ORDER BY sales_amount_inr DESC;
 ```
-In Delhi NCR of Own Brand product type 
+In Delhi NCR, Own Brand products generated Rs 15,58,36,149/- in sales, while Distribution products amounted to Rs 86,85,9406/-
 
 12. What is the distribution of customers across different customer types?
 ```
@@ -174,14 +176,17 @@ SELECT customer_type, COUNT(*) AS customer_count
 FROM atliq.customers
 GROUP BY customer_type;
 ```
-
+In the customer base, there are 19 customers each categorized under E-Commerce and Brick & Mortar types.
 
 13. What is the overall sales quantity and sales amount?
 ```
-SELECT sum(sales_qty) AS sales_quantity, sum(sales_amount) AS sales_amount
+SELECT sum(sales_qty) AS sales_quantity, SUM(CASE
+        WHEN currency = 'USD' THEN sales_amount * 83 
+        ELSE sales_amount
+    END) AS sales_amount_inr
 FROM atliq.transactions;
 ```
-The overall sales quantity and sales amount is
+The total sales quantity amounts to 24,29,282, with a total sales amount of Rs 98,48,74,963/-.
 
 ### Power BI Analysis and Dashboard
 
