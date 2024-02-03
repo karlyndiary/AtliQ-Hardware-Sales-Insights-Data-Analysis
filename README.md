@@ -129,16 +129,17 @@ FROM atliq.customers;
 ```
 Brick & Mortar and E-Commerce are the two customer types.
 
-9. What are the sales performances across different markets?
+9. What are the sales performances across different markets in 2020?
 ```
 SELECT markets_name, sum(sales_amount) AS sales_amount
 FROM atliq.transactions t
 JOIN atliq.markets m
 ON m.markets_code = t.market_code
+WHERE year(order_date) = 2020
 GROUP BY market_code
 ORDER BY sales_amount DESC; 
 ```
-
+Among the 15 markets, Delhi exhibited the most outstanding sales performance, amounting to Rs 7,77,32,602/- in 2020.
 
 10. Which products contribute the most to sales revenue?
 ```
@@ -177,7 +178,7 @@ GROUP BY customer_type;
 SELECT sum(sales_qty) AS sales_quantity, sum(sales_amount) AS sales_amount
 FROM atliq.transactions;
 ```
-The overall sales quantity is and sales amount is
+The overall sales quantity and sales amount is
 
 ### Power BI Analysis and Dashboard
 
