@@ -5,7 +5,7 @@
 * [AIMS Grid](#aims-grid)
 * [Tools Used](#tools-used)
 * [ER Diagram](#er-diagram)
-* [Analysis using SQL](#analysis-using-sql)
+* [Analysis using MySQL](#analysis-using-mysql)
 * [Power BI Analysis & Dashboard](#power-bi-analysis-and-dashboard)
   
 ### Problem Statement
@@ -43,7 +43,7 @@ Dataset: https://codebasics.io/resources/sales-insights-data-analysis-project
 ### ER Diagram
 ![sales drawio](https://github.com/karlyndiary/AtliQ-Hardware-Sales-Insights-Data-Analysis/assets/116041695/244e7c3c-16ea-4005-975f-4c8ee0ecefac)
 
-### Analysis using SQL
+### Analysis using MySQL
 
 Server -> Data Import -> Select from self-contained file -> Import Progress Tab -> Start Import
 
